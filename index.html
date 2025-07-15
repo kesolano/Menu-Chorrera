@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MenuChorrera</title>
+    <style>
+        /* ---------- FONDO GENERAL CON IMAGEN DIFUMINADA ---------- */
+        body {
+            background: #2d3d23;
+            color: #fff;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('images/image.jpg') center center/cover no-repeat;
+            filter: blur(1px) brightness(0.7);
+            z-index: -1;
+        }
+
+        /* ---------- CONTENEDOR PRINCIPAL ---------- */
+        .container {
+            max-width: 100%;
+            margin: auto;
+            padding: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ---------- ENCABEZADO CON LOGO ---------- */
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #a3c293;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-circle img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.4em;
+            margin-bottom: 0.5em;
+            color: #ffffff;
+            text-shadow: 0 2px 8px #222;
+        }
+
+        /* ---------- CONTENEDOR DE TODAS LAS CARDS ---------- */
+        .cards-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* ---------- ESTILO DE CADA CARD DE CÓCTEL ---------- */
+        .coctel-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 18px;
+            padding: 8px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+            border: 1.5px solid #a3c293;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ---------- IMAGEN CIRCULAR DE CADA CÓCTEL ---------- */
+        .coctel-card img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 30%;
+            background: #fff;
+            flex-shrink: 0;
+            border: 2px solid #a3c293;
+        }
+
+        /* ---------- INFORMACIÓN DEL CÓCTEL ---------- */
+        .coctel-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .coctel-title {
+            font-size: 1em;
+            font-weight: bold;
+            margin: 0 0 4px 0;
+            color: #000;
+            text-shadow: 0 1px 3px #ceb5b5;
+        }
+
+        .coctel-ingredientes {
+            font-size: 0.9em;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .coctel-precio {
+            font-size: 1em;
+            font-weight: bold;
+            color: #000;
+            padding: 3px 10px;
+            border-radius: 10px;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="padding-top: 16px;">
+        <!-- Logo del menú -->
+        <div class="header-flex">
+            <div class="logo-wrapper">
+                <div class="logo-circle">
+                    <img src="images/logo.jpg" alt="Ecohotel La Chorrera Logo" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Título principal -->
+        <h1>Menú de Cócteles</h1>
+
+        <!-- Tarjetas de cócteles -->
+        <div class="cards-grid">
+
+            <div class="coctel-card">
+                <img src="images/margarita.png" alt="Margarita">
+                <div class="coctel-info">
+                    <div class="coctel-title">Margarita</div>
+                    <div class="coctel-ingredientes">Tequila, triplesec, limón, sal</div>
+                    <div class="coctel-precio">$22.000</div>
+                </div>
+            </div>
+
+            <div class="coctel-card">
+                <img src="images/margarita_cereza.png" alt="Margarita Cerezada">
+                <div class="coctel-info">
+                    <div class="coctel-title">Margarita Cerezada</div>
+                    <div class="coctel-ingredientes">Tequila, granadina, limón, cereza, sal</div>
+                    <div class="coctel-precio">$23.000</div>
+                </div>
+            </div>
+
+            <div class="coctel-card">
+                <img src="images/sunrise.png" alt="Tequila Sonrise">
+                <div class="coctel-info">
+                    <div class="coctel-title">Tequila Sonrise</div>
+                    <div class="coctel-ingredientes">Tequila, naranja, granadina, cereza</div>
+                    <div class="coctel-precio">$23.000</div>
+                </div>
+            </div>
+
+            <div class="coctel-card">
+                <img src="images/caipiroska.jpg" alt="Caipiroska Blue">
+                <div class="coctel-info">
+                    <div class="coctel-title">Caipiroska Blue</div>
+                    <div class="coctel-ingredientes">Vodka, limón, azúcar, triplesec, hierba buena</div>
+                    <div class="coctel-precio">$22.000</div>
+                </div>
+            </div>
+
+            <div class="coctel-card">
+                <img src="images/mojito.jpg" alt="Mojito">
+                <div class="coctel-info">
+                    <div class="coctel-title">Mojito</div>
+                    <div class="coctel-ingredientes">Ron blanco, limón, hierba buena, azúcar</div>
+                    <div class="coctel-precio">$20.000</div>
+                </div>
+            </div>
+
+            <div class="coctel-card">
+                <img src="images/blue.jpg" alt="Hawaiian Blue">
+                <div class="coctel-info">
+                    <div class="coctel-title">Hawaiian Blue</div>
+                    <div class="coctel-ingredientes">Ron blanco, piña, triplesec, crema de coco</div>
+                    <div class="coctel-precio">$24.000</div>
+                </div>
+            </div>
+
+            <div class="coctel-card">
+                <img src="images/cuba.jpg" alt="Cuba Libre">
+                <div class="coctel-info">
+                    <div class="coctel-title">Cuba Libre</div>
+                    <div class="coctel-ingredientes">Ron, cocacola, naranja</div>
+                    <div class="coctel-precio">$18.000</div>
+                </div>
+            </div>
+
+            <div class="coctel-card">
+                <img src="images/pina_colada.jpg" alt="Piña Colada">
+                <div class="coctel-info">
+                    <div class="coctel-title">Piña Colada</div>
+                    <div class="coctel-ingredientes">Ron, crema de coco, piña, cereza</div>
+                    <div class="coctel-precio">$24.000</div>
+                </div>
+            </div>
+
+            <div class="coctel-card">
+                <img src="images/descontrol.jpg" alt="Descontrol">
+                <div class="coctel-info">
+                    <div class="coctel-title">Descontrol</div>
+                    <div class="coctel-ingredientes">Ron, bailys, café, helado, amaretto</div>
+                    <div class="coctel-precio">$25.000</div>
+                </div>
+            </div>
+
+            <div class="coctel-card">
+                <img src="images/chorro.jpg" alt="La Chorrera">
+                <div class="coctel-info">
+                    <div class="coctel-title">La Chorrera</div>
+                    <div class="coctel-ingredientes">Amaretto, mandarina, granadina</div>
+                    <div class="coctel-precio">$25.000</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html><
